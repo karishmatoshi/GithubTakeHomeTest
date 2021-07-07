@@ -17,8 +17,11 @@ GITHUB is a very good tool for CI/CD implementation and there are other tools wh
 3) Commit/merge/deploy permissions: Dunder Mifflin has expressed concern about moving away from Gerrit. They have asked how they can control repository access, merging, and deployment permissions within GitHub, and what aspects of their desired security setup can be enforced programmatically.
 
 Answer:
+
 After the implementation of automated build and deployments by CI/CD, questions around access to code and deployments begin to fall into two primary groups: Repo Access and Automated Deployments.
+
 Repo Access:
 Access to repos can be managed by the use of the TEAMS feature provided by GITHUB and automation can be achieved around that via GITHUB API for modifying the addition and deletions of the users from the teams employees join and leave the company.
+
 Automated Deployments:
 GITHUB has two great features such as Branch Protection and Pull Requests that are great methods of ensuring the quality of code that makes it to your primary branch. The CI/CD pipelines can be triggered on the branching strategy with some checks around the successful code reviews of the PULL REQUESTS raised. Quality gates like test coverage or security scans can be added a pre-requisite in the ci/cd pipeline before code can be merged, even if the code has already been reviewed and approved.
